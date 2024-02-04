@@ -41,7 +41,7 @@ exports.getExpense = async(req, res) => {
 exports.deleteExpense = async(req, res) => {
     const {id} = req.params;
     ExpenseSchema.findByIdAndDelete(id)
-    .then((income) =>{
+    .then((expense) =>{
         res.status(200).json({message: 'Expense deleted successfully'})
     })
     .catch((err) =>{
